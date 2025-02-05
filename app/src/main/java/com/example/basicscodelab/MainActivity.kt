@@ -1,4 +1,5 @@
 package com.example.basicscodelab
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -28,6 +29,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.codelab.basics.ui.theme.BasicsCodelabTheme
 import com.example.basicscodelab.ui.theme.BasicsCodeLabTheme
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -130,6 +132,12 @@ private fun Greeting(name: String, modifier: Modifier = Modifier) {
     }
 }
 
+@Preview(
+    showBackground = true,
+    widthDp = 320,
+    uiMode = UI_MODE_NIGHT_YES,
+    name = "GreetingPreviewDark"
+)
 @Preview(showBackground = true, widthDp = 320)
 @Composable
 fun GreetingPreview() {
